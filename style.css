@@ -1,0 +1,58 @@
+body{
+    background-color: black;
+    color: white;
+
+}
+.container{
+    position: fixed;
+    margin: 20px 10px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* CLOCK ITEM IS HERE */
+.clock{
+
+    position: relative;
+    width: 100px;
+    
+    
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid white;
+
+}
+.clock:hover{
+    cursor:none;
+
+}
+.clock::selection{
+    cursor: none;
+}
+.clock::after ::before{
+    cursor: none;
+}
+#hrs{
+    font-size: 100px;
+    position: relative;
+    
+}
+#mins{
+    font-size: 100px;
+    position: relative;
+    
+}
+
+/* DATE ITEM IS HERE */
+
+.date{
+    position: relative;
+    font-size: 20px;
+    padding: 10px;
+}
