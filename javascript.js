@@ -1,3 +1,5 @@
+
+// CLOCK TIME FUNCTION
 function displayTime(){
     var dateTime = new Date();
     var hrs = dateTime.getHours();
@@ -20,6 +22,7 @@ function displayTime(){
 }
 setInterval(displayTime, 10);
 
+// CLOCK DATE FUNCTION
 function date(){
     var date=new Date();
     var dd=date.getDate();
