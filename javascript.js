@@ -40,3 +40,14 @@ function date(){
     document.getElementById('date').innerHTML=f_date;
 }
 setInterval(date,10);
+
+// DAY FUNCTION IS HERE
+function day(){
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+    const d = new Date();
+    let days = weekday[d.getDay()];
+
+    document.getElementById('day1').innerHTML=days.toUpperCase();
+}
+setInterval(day,10);
