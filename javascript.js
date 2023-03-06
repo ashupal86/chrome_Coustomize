@@ -51,3 +51,16 @@ function day(){
     document.getElementById('day1').innerHTML=days.toUpperCase();
 }
 setInterval(day,10);
+
+
+// Quote function is here
+function quote(){
+    const quotes=["'Imagine a movie where main character\nsits and do nothing  Now, look at you'","'There is no Tommorow so get up and do it now'","'Give your 110% now so you wont\nregret later on'"];
+    const rand=Math.round(Math.random()*quotes.length)
+
+    
+    document.getElementById('Quote').innerHTML=quotes[rand];
+}
+
+
+setInterval(quote,6000)
