@@ -6,10 +6,10 @@ function displayTime(){
     var min = dateTime.getMinutes();
     
     if (hrs>12){
-        hrs=hrs-12
+        hrs=(hrs-12)
     }
     if (hrs<10){
-        hrs=String(hrs)
+        hrs="0"+String(hrs)
     }
     if (min<10){
         min='0'+String(min)
