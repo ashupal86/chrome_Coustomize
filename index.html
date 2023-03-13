@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Tab</title>
     <script src="javascript.js"></script>
     <link rel="stylesheet" href="style.css">
     <script>
@@ -27,9 +27,14 @@ pic[12]='/image-bg/13.gif'
 
 console.log(randomno)
 function changeimage(){
-    var randomno=Math.round(Math.random()*pic.length);
+var randomno=Math.round(Math.random()*pic.length);
 document.getElementById('Image').src=pic[randomno];
-}</script>
+connsole.log(pic[randomno]);
+pic.reduce(randomno);
+
+}
+setInterval(changeimage,60000)
+</script>
    
 </head>
 <body>
@@ -79,7 +84,7 @@ document.getElementById('Image').src=pic[randomno];
             <div class="pin"></div>
         </div>
         <div class="quotes">
-            <span id="Quote"> </span>
+            <span id="Quote"> "A year from now you will wish you had started today." </span>
             
         </div>
 

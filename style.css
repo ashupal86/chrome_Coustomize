@@ -216,6 +216,8 @@ body img{
     background-attachment: fixed;
     background-clip: unset;
     background-size: cover;
+    height: 100%;
+    
     background-repeat: no-repeat;
     user-select: none;
     -moz-user-select: none;
@@ -228,7 +230,7 @@ body img{
     
     z-index: 1;
     position: fixed;
-    bottom: 5px;
+    top: 95%;
     left: 5px;
     border-radius:30px ;
     background-color: transparent;
