@@ -77,18 +77,33 @@ body{
     font-size: 80px;
 
 }
+
+
+/* search bar is here */
+.search_bar{
+    display: flex;
+    width: 800px;
+
+}
 #search{
     position: relative;
     margin-left: -60px;
     border-radius: 25px;
     width: 500px;
     height: 40px;
+    padding-left: 15px;
 }
-
+.searchbtn{
+    
+    width:45px ;
+    height: 45px;
+    border-radius: 50px;
+}
 /* PIN ITEM IS HERE */
 
 .pin_item{
     position: relative;
+    margin-top: 20px;
     margin-left:-60px ;
     width: 500px;
     height: 60px;

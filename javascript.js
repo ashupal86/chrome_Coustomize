@@ -63,4 +63,7 @@ function quote(){
 }
 
 
-setInterval(quote,6000)
+setInterval(quote,6000);
+
+
+
