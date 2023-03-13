@@ -34,17 +34,18 @@ document.getElementById('Image').src=pic[randomno];
 </head>
 <body>
     <img src="image-bg/2.jpg" id="Image" height="100%" width="110%"  alt="4.jpg">
-    <button id="image" onclick="changeimage()" >CHANGE</button>
+    <button id="image" onclick="changeimage()" >CHANGE BACKGROUND</button>
 
     <div class="container">
-        <div class="clock">
+        <div class="clock" onclick="bigclock()">
+            
             <span id="hrs">00</span>
             <br>
             <span id="mins">00</span>
         </div>
 
-        <div class="date">
-            <span id="date">00</span>
+        <div class="date" onclick="bigclock()">
+            <span id="date">00/00/00</span>
         </div>
 
     

@@ -30,12 +30,12 @@ padding: 5px;
     border-radius: 10px;
     border: 1px solid white;
 padding: 4px;
+font-weight: 700;
 }
+
 .clock:hover{
-    cursor:none;
-
+    cursor: pointer;
 }
-
 
 #hrs{
     font-size: 100px;
@@ -54,12 +54,15 @@ padding: 4px;
     position: fixed;
     top: 270px;
     font-size: 20px;
+    font-weight: 600;
     border: 1px solid white;
     border-radius: 25px;
     padding: 8px;
     backdrop-filter: blur(2px);
 }
-
+.date:hover{
+    cursor: pointer;
+}
 /* CONTAINER2 IS HERE */
 .container2{
     position: absolute;
@@ -203,11 +206,12 @@ padding: 4px;
     background-color: white;
 }
 
+/* IMAGE IS HERE */
 body img{
     position: absolute;
     top: 0px;
     left: 0px;
-    
+    z-index: -2;
     background: fixed;
     background-attachment: fixed;
     background-clip: unset;
@@ -227,7 +231,20 @@ body img{
     bottom: 5px;
     left: 5px;
     border-radius:30px ;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid white;
+
+    backdrop-filter: blur(50px);
 }
 
-
+.clock:nth-child(1)::first-letter{
+   
+    color: red;
+}
+.date::first-letter{
+    color: red;
+}
 

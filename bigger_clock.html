@@ -20,13 +20,39 @@
             align-items: center;
             display: inline;
         }
+        .date{
+            position: fixed;
+    top:60%;
+    left: 40%;
+    font-size: 26px;
+    transform: translate(-50% ,-50%);
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px;
+   
+    color: white;
+        }
+        #date{
+    position: fixed;
+    top:50%;
+    left: 180%;
+    font-size: 50px;
+    transform: translate(-50% ,-50%);
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px;
+    
+    color: white;
+}
         #time{
             font-size: 100px;
         }
         #ses{font-size: 80px;
             
         }
-        
+        #ses{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -34,8 +60,30 @@
         <span id="time">00</span>
         <span id="ses">00</span>
     </div>
+    <div class="date" >
+        <h1>DATE:</h1>
+        <span id="date">00/00/00</span>
+    </div>
 
     <script>
+    function date(){
+    var date=new Date();
+    var dd=date.getDate();
+    var mm=date.getMonth();
+    var yy=date.getFullYear();
+
+    if (dd<10) {
+        
+        dd=String(dd)
+    }
+    if (mm<10){
+        mm='0'+String(mm)
+    }
+
+    var f_date=dd+'/'+mm+'/'+yy
+    document.getElementById('date').innerHTML=f_date;
+}
+setInterval(date,10);
     function displayTime(){
     var dateTime = new Date();
     var hrs = dateTime.getHours();
@@ -51,7 +99,7 @@
     }
     
     if (hrs>12){
-        hrs="0"+String(hrs-12)
+        hrs=String(hrs-12)
     
     }
     if (min<10){
