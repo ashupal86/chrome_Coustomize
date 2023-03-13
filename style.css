@@ -1,43 +1,42 @@
 body{
     background-color: black;
     color: white;
+    overflow: hidden;
 
 }
 .container{
     position: fixed;
-    margin: 20px 10px;
-    padding: 10px;
-    height: auto;
-    width: auto;
-    border: 1px solid white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 110px;
+    height: 300px;
+    border: 3px solid white;
+    border-radius: 10px;
+    top: 5px;
+    left: 5px;
+    padding-left:5px ;
+    padding-right: 6px;
+padding: 5px;
+    z-index: 1;
 }
 
 
 /* CLOCK ITEM IS HERE */
+
 .clock{
 
-    position: relative;
+    position: fixed;
     width: 100px;
-    
-    
-    padding: 5px;
+    z-index: 1;
+    backdrop-filter: blur(2px);
     border-radius: 10px;
     border: 1px solid white;
-
+padding: 4px;
 }
 .clock:hover{
     cursor:none;
 
 }
-.clock::selection{
-    cursor: none;
-}
-.clock::after ::before{
-    cursor: none;
-}
+
+
 #hrs{
     font-size: 100px;
     position: relative;
@@ -52,9 +51,13 @@ body{
 /* DATE ITEM IS HERE */
 
 .date{
-    position: relative;
+    position: fixed;
+    top: 270px;
     font-size: 20px;
-    padding: 10px;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 8px;
+    backdrop-filter: blur(2px);
 }
 
 /* CONTAINER2 IS HERE */
@@ -75,14 +78,18 @@ body{
     padding-left: 25px;
     padding-bottom:10px ;
     font-size: 80px;
+    text-shadow: 1px 1px 1px black;
+
 
 }
+
 
 
 /* search bar is here */
 .search_bar{
     display: flex;
     width: 800px;
+    
 
 }
 #search{
@@ -92,12 +99,32 @@ body{
     width: 500px;
     height: 40px;
     padding-left: 15px;
+    background-color: transparent;
+    border: 3px solid white;
+    font-weight: 900;
+    color: white;
+    box-shadow: none;
 }
+
+#search:enabled{border: 3px solid white;
+    background-color: transparent;
+
+}
+
 .searchbtn{
     
     width:45px ;
     height: 45px;
     border-radius: 50px;
+    transform: scale();
+    background-color: transparent;
+    border: 3px solid white;
+    font-size: larger;
+}
+.searchbtn:hover{
+    cursor: pointer;
+    border: 3px solid rgb(0, 0, 0);
+    filter: brightness(110%);
 }
 /* PIN ITEM IS HERE */
 
@@ -107,12 +134,13 @@ body{
     margin-left:-60px ;
     width: 500px;
     height: 60px;
-    border: 1px solid white;
+    
+    border-radius: 25px;
     overflow-y: hidden;
     overflow-x: scroll;
     display: inline-flex;
     padding: 5px;
-    
+    backdrop-filter: blur(1.5px);
 }
 .pin_item::-webkit-scrollbar{
     display: none;
@@ -132,10 +160,15 @@ body{
     position: absolute;
     width: 400px;
     height: auto;
+    overflow:hidden;
+    text-overflow: clip;
     top: 110%;
     left: 50%;
     transform: translate(-50%,30%);
-    border: 1px solid white;
+    
+    border-radius: 25px;
+    padding: 10px;
+    backdrop-filter: blur(2px);
 
 }
 #Quote{
@@ -145,14 +178,20 @@ body{
 
 /* SIDE BAR IS HERE */
 
-.sidebar{
+.sidebar{position: fixed;
+    right: 5px;
+    border-radius: 30px;
     width: 50px;
     height: auto;
-    border: 1px solid white;
-    position: absolute;
-    padding: 4px;
+    border: 3px solid rgb(255, 255, 255);
+    backdrop-filter: blur(2px);
+    
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
     top: 30%;
-    right: 0%;
+    
 }
 #item_bar{
     border-radius: 50%;
@@ -164,6 +203,31 @@ body{
     background-color: white;
 }
 
+body img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    background: fixed;
+    background-attachment: fixed;
+    background-clip: unset;
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    -moz-user-select: none;
+   -webkit-user-drag: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+}
+
+#image{
+    
+    z-index: 1;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    border-radius:30px ;
+}
 
 
 

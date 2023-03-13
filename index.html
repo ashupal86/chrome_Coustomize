@@ -7,8 +7,35 @@
     <title>Document</title>
     <script src="javascript.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script>
+        //RANDOM PICTURE
+var pic= new Array();
+pic[0]='/image-bg/1.jpg'
+pic[1]='/image-bg/2.jpg'
+pic[2]='/image-bg/3.jpg'
+pic[3]='/image-bg/4.png'
+pic[4]='/image-bg/5.gif'
+pic[5]='/image-bg/6.jpg'
+pic[6]='/image-bg/7.jpg'
+pic[7]='/image-bg/8.gif'
+pic[8]='/image-bg/9.jpg'
+pic[9]='/image-bg/10.jpg'
+pic[10]='/image-bg/11.jpg'
+pic[11]='/image-bg/12.jpg'
+pic[12]='/image-bg/13.gif'
+
+
+console.log(randomno)
+function changeimage(){
+    var randomno=Math.round(Math.random()*pic.length);
+document.getElementById('Image').src=pic[randomno];
+}</script>
+   
 </head>
 <body>
+    <img src="image-bg/2.jpg" id="Image" height="100%" width="110%"  alt="4.jpg">
+    <button id="image" onclick="changeimage()" >CHANGE</button>
+
     <div class="container">
         <div class="clock">
             <span id="hrs">00</span>
@@ -26,7 +53,7 @@
 
 
         <div class="day">
-            <span id="day1">SUNDAY</span>
+            <span id="day1">SU</span>
         </div>
 
 
@@ -34,7 +61,8 @@
     
             <form action="https://www.google.com/search" method="get">
                 <input type="text" id="search" name="q" placeholder="SEARCH" >
-                <input type="submit" value="search" class="searchbtn">
+                
+                <input type="submit" value="🔍" class="searchbtn">
             </form>
 
     
@@ -43,7 +71,6 @@
 
 
         <div class="pin_item">
-            <div class="pin"></div>
             <div class="pin"></div>
             <div class="pin"></div>
             <div class="pin"></div>
