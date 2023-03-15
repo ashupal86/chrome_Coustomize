@@ -73,3 +73,10 @@ function bigclock(){
     location.href="bigger_clock.html"
 }
 
+function newpin(){
+
+    
+
+}
+
+

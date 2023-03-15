@@ -7,6 +7,7 @@
 <li>It has a digital clock with date.</li>
 <li>It search with google.com</li>
 <li>It has cool wallpaper that changes daily and show the day also.</li>
+<li>You can add more just copy them and paste in **image-bg** folder</li>
 <li>It also has a ___Quotes___ Space where Motivating Qutoes are Shown.</li>
 <li>For more Productivity it provide a side bar where you can tug 5 items at a time for Quick access.</li>
 <li>you can pin lot of item in its item bar just below the search bar.</li>
