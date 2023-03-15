@@ -74,6 +74,10 @@ function bigclock(){
 }
 
 function newpin(){
+    document.getElementById('popup_winodw').hidden=false;
+    const name=localStorage.getItem("NAME");
+    const url=localStorage.getItem("URL");
+    document.writeln('<a id="new_pin_item" herf="'+url+'"'+ '<img width="50px" hight="50px" src="https://icon.horse/icon/'+url +'</a>')
 
     
 
