@@ -74,13 +74,20 @@ setInterval(changeimage,60000)
     
         
         </div>
+<!-- 
+        i stuck here i want to open a window in iframe which is small_winodw.html which ask for name 
+        and url of pin item and it will automatically add the item to the class pin_item and hide the 
+        iframe -->
 
-        <iframe src="small_window.html" id="popup_window" width="420px" height="140px" style= "border-radius: 25px; backdrop-filter: blur(2px); overflow: hidden; z-index: 3; position: absolute; top: 50%; left: 50%; transform: translate(-50% ,-50%);"  name="popup" frameborder="2"></iframe>
+        <iframe name="iframe" src="small_window.html" id="popup_window" width="420px"height="140px" hidden style= "z-index: 2; border-radius: 25px; backdrop-filter: blur(2px); overflow: hidden;  position: absolute; top: 50%; left: 50%; transform: translate(-50% ,-50%);"  name="popup" frameborder="2"></iframe>
         <div class="pin_item">
            
-            
-            <button id="new_pin_item" onclick="newpin()">+</button>
+            <script src="shortcut.js"></script>
+            <button id="new_pin_item" onclick="start()" >+</button>
         </div>
+
+
+
         <div class="quotes">
             <span id="Quote"> "A year from now you will wish you had started today." </span>
             

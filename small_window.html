@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>new pin</title>
+
     <style>
         body{display: flex;
         flex-direction: column;}
@@ -23,28 +24,41 @@
         body input::-webkit-scrollbar{
             display: none;
         }
-        #submitbtn{
-            width: 400px;
+        #submitbtn{   
+            position: absolute;
+            bottom: 10px;
+            padding-top: 5px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100px;
             height: 30px;
             border-radius: 25px;
-            border: 0px solid white;
+            border: 1px solid rgb(0, 0, 0);
+            text-align: center;
             margin-top: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
         }
+    
     </style>
 </head>
 <body>
     
     <input type="text" id="name" placeholder="Enter Shortcut name">
         <input type="url"  id="URL" placeholder="Enter URL Here">
-        <button id="submitbtn">Submit</button>    
+        <a href="index.html" target="_parent" id="submitbtn">Submit</a>    
 
-    <script>
-        const name=document.getElementById('name');
-        const url=document.getElementById('URL');
+    <script >
+        let name=document.getElementById('name');
+        let url=document.getElementById('URL');
         localStorage.setItem("NAME",name)
         localStorage.setItem("URL",url)
-        
 
+
+        
     </script>
+
+    
 </body>
 </html>

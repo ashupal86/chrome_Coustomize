@@ -73,14 +73,19 @@ function bigclock(){
     location.href="bigger_clock.html"
 }
 
-function newpin(){
-    document.getElementById('popup_winodw').hidden=false;
-    const name=localStorage.getItem("NAME");
-    const url=localStorage.getItem("URL");
-    document.writeln('<a id="new_pin_item" herf="'+url+'"'+ '<img width="50px" hight="50px" src="https://icon.horse/icon/'+url +'</a>')
+function start(){
+let iframe=document.getElementById("popup_window")
+if (iframe.hidden==true){
+    iframe.hidden=false;
+    let url=localStorage.getItem("NAME")
+    let name=localStorage.getItem("URL")
+    document.writeln('<a href="'+url+'" id="new_pin_item" style="width: 50px; height: 50px; border-radius: 50%; padding: 1px; overflow: hidden;"><img src="'+url+'/favicon.ico" >'+name+'</a>')
 
-    
-
+} 
+else{
+    iframe.hidden=true
 }
+}
+
 
 
