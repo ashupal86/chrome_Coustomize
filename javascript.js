@@ -74,18 +74,16 @@ function bigclock(){
 }
 
 function start(){
-let iframe=document.getElementById("popup_window")
-if (iframe.hidden==true){
-    iframe.hidden=false;
-    let url=localStorage.getItem("NAME")
-    let name=localStorage.getItem("URL")
-    document.writeln('<a href="'+url+'" id="new_pin_item" style="width: 50px; height: 50px; border-radius: 50%; padding: 1px; overflow: hidden;"><img src="'+url+'/favicon.ico" >'+name+'</a>')
+    let name=window.prompt("Enter Shortcut name: ")
+    let url=window.prompt("Enter URL:")
+    if (name=="" || url=="" ){
+        window.alert("Canceled") }
+    else{
+        document.writeln(' <a href="'+url+'" id="new_pin_item"><img src="'+url+'/favicon.ico"  alt="">'+name+'</a>')
+    }
+    
+}
 
-} 
-else{
-    iframe.hidden=true
-}
-}
 
 
 
