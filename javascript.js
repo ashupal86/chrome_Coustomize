@@ -74,16 +74,65 @@ function bigclock(){
 }
 
 function start(){
-    let name=window.prompt("Enter Shortcut name: ")
-    let url=window.prompt("Enter URL:")
-    if (name=="" || url=="" ){
-        window.alert("Canceled") }
-    else{
-        document.writeln(' <a href="'+url+'" id="new_pin_item"><img src="'+url+'/favicon.ico"  alt="">'+name+'</a>')
+    window.location.reload
+    var name=window.prompt("Enter Shortcut name: ")
+    var url=window.prompt("Enter URL:")
+
+    localStorage.setItem(name,url)
+
+    if ((localStorage.getItem(name)==url)&&document.getElementById(name)){
+        alert("Already pinned")
+       
+        
     }
+  else{
+    if (name.length>8){
+        name=name.slice(0,8);
+        name=name.slice(0,1).toUpperCase+name.slice(1,8)
+    }
+    if (url.slice(0,8)=="https://"){
+        url=url.slice(8);
+        console.log(url);
+    }
+
     
+
+
+    if ((name=="")||( url=="" )){
+        window.alert("Canceled") 
+        window.location.reload()
+    }
+
+    else if ( !(name=="") && !(url=="")){
+        let html=(' <a href="https://'+url+'" class="new_pin_item" id="'+name+'"><button id="closebtn"  onclick="closeline('+name+')">-</button><img src="https://'+url+'/favicon.ico" id="favicon">'+name+'</a>');
+        
+        document.getElementById("pin_items").innerHTML+=html
+    
+    }
+
 }
 
+}
+// to save the info here is function
+window.onunload = function() { 
+    localStorage.setItem(
+        "page_"+window.location.pathname,
+        document.body.innerHTML
+    ); 
+};
+window.onload = function() { 
+    document.body.innerHTML = localStorage.getItem("page_"+window.location.pathname);
+};
+
+
+// here is closeline function to remove pin write it here
+function closeline(clicked){
+
+    document.getElementById(clicked.id).remove();
+    
+   
+
+}
 
 
 

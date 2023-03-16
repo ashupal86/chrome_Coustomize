@@ -250,8 +250,45 @@ body img{
     color: red;
 }
 
-#new_pin_item{
+.new_pin_item{
     
+    width: 80px;
+    height: auto;
+  border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    font-size: 18px;
+
+    text-decoration: none;
+    scroll-snap-align: start;
+}
+.new_pin_item:hover{
+    transform: scale(1.03);
+    backdrop-filter: blur(20px );
+    background-color: rgba(255, 255, 255, 0.231);
+}
+
+.new_pin_item img{
+    width: 35px;
+    height: 35px;
+padding: 10px;
+
+    
+    position: relative;
+    
+    background-color: white;
+    border-radius: 50%;
+
+
+}
+.button{
     width: 80px;
     height: auto;
   border-radius: 15px;
@@ -265,25 +302,67 @@ body img{
 
     text-decoration: none;
 }
-#new_pin_item:hover{
+#new_pin_itembtn{
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    border: 0px ;
+}
+.button:hover{
     transform: scale(1.03);
     backdrop-filter: blur(20px );
     background-color: rgba(255, 255, 255, 0.231);
-}
 
-#new_pin_item img{
-    width: 35px;
-    height: 35px;
-padding: 10px;
+}
+#closebtn{
+    background-color: transparent;
+    border: 0px;
+    font-size: 30px;
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    opacity: 0;
+    right: 2px;
+    
+    
+    
+}
+.new_pin_item:hover #closebtn{
+opacity: 100;
 
     
+}
+
+#pin_items{
     position: relative;
     
-    background-color: white;
-    border-radius: 50%;
-
-
+    
+    width: auto;
+    height: 100px;
+    padding-left: 2px;
+    
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+   
+    scroll-padding: 5px;
+    gap: 5px;
+    
+    
+    backdrop-filter: blur(1.5px);
 }
-
-
-
+#pin_items::-webkit-scrollbar{
+    display: none;
+}
+#favicon{
+    align-self: center;
+    display: flex;
+    filter: contrast(1.2);
+    filter: hue-rotate(2);
+    
+}
